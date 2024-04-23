@@ -1,20 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {View,Text, Image, ImageBackground, Button, ActivityIndicator, Alert} from "react-native";
+const logoImage = require("./assets/adaptive-icon.png")
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+//IMAGE VIEW, TEXT VIEW
+// export default function App(){
+//     return (
+//     <View style={{flex:1, backgroundColor: "pink", padding:60}}>
+//     <ImageBackground source={logoImage} style={{flex:1}}>
+//       <Text> IMAGE TEXT</Text>
+//     </ImageBackground>
+//     </View>
+//   );
+// }
+
+//Button 
+// export default function App(){
+//   return (
+//     <View style={{flex:1, backgroundColor:"pink", padding:60}}>
+//   <Button title="Hello"
+//     onPress={()=> console.log("Vanakkam thala")}
+//   />
+//     </View>  
+// );
+// }
+
+//App indicator
+// export default function App(){
+//   return(
+//     <View style={{flex:1, backgroundColor:"white", padding:60}}>
+//       <ActivityIndicator size={"large"}color={"red"}></ActivityIndicator>
+//     </View>
+//   )
+// }
+
+export default function App(){
+  return(
+    <View style={{flex:1, backgroundColor:"pink", padding:60}}>
+    <Button title="Alert" onPress={()=> Alert.alert("pODA dEI! pODA")}/>
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
